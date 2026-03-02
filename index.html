@@ -60,6 +60,84 @@
         .red {
             color: red;
         }
+        .challenge-card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin: 20px 0;
+            background: #fafafa;
+        }
+        .challenge-card h3 {
+            margin-top: 0;
+            color: #1a5276;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .challenge-tag {
+            display: inline-block;
+            background: #2980b9;
+            color: #fff;
+            font-size: 0.78em;
+            padding: 2px 10px;
+            border-radius: 12px;
+            flex-shrink: 0;
+        }
+        .challenge-title-text {
+            flex: 1;
+        }
+        .challenge-page-btn {
+            display: inline-block;
+            background: #e74c3c;
+            color: #fff !important;
+            font-size: 0.78em;
+            font-weight: bold;
+            padding: 4px 14px;
+            border-radius: 6px;
+            text-decoration: none !important;
+            white-space: nowrap;
+            flex-shrink: 0;
+            margin-left: auto;
+            letter-spacing: 0.03em;
+        }
+        .challenge-page-btn:hover {
+            background: #c0392b;
+            text-decoration: none !important;
+        }
+        .challenge-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        .challenge-link-btn {
+            display: inline-block;
+            background: #fff;
+            color: #2980b9 !important;
+            border: 1.5px solid #2980b9;
+            font-size: 0.82em;
+            padding: 4px 14px;
+            border-radius: 6px;
+            text-decoration: none !important;
+        }
+        .challenge-link-btn:hover {
+            background: #ebf5fb;
+            text-decoration: none !important;
+        }
+        .metric-table {
+            width: auto;
+            margin: 10px 0;
+        }
+        .metric-table th, .metric-table td {
+            padding: 5px 12px;
+        }
+        details summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: #2980b9;
+            margin-bottom: 6px;
+        }
     </style>
 </head>
 <body>
@@ -71,11 +149,10 @@
 
     <h2>Important Dates/Links</h2>
     <ul>
-        <li><a href="https://huggingface.co/spaces/zhanchao019/test_server_wacv">Challenge</a></li>
-        <li><a href="https://github.com/TopoCoTWACV26/TopoCoT_code">Baseline</a></li>
-        <li><a href="https://modelscope.cn/datasets/yimingyang23/TopoCoT/files">Datasets</a></li>
+
         <li>Workshop Day: Mar 7, 2026</li>
     </ul>
+    <p>This workshop hosts <strong>Four challenges</strong> covering different aspects of autonomous driving. See the <a href="#challenges">Challenges</a> section for details.</p>
 
     <div class="divider"></div>
 
@@ -93,16 +170,144 @@
     <h2>Topics:</h2>
     <p>The workshop will cover a wide range of topics, including but not limited to:</p>
     <ul>
-        <li>LLM for lane topology understanding and HD map generation.</li>
-        <li>VLM for lane topology understanding and HD map generation.</li>
-        <li>CoT for lane topology understanding and HD map generation.</li>
-        <li>Reinforcement learning for lane topology understanding and HD map generation.</li>
-        <li>Transfer learning for lane topology understanding and HD map generation.</li>
+        <li>LLM/VLM/CoT for lane topology understanding and HD map generation.</li>
+        <li>Reinforcement learning and transfer learning for lane topology understanding and HD map generation.</li>
         <li>World modeling and simulation for lane topology understanding and HD map generation.</li>
         <li>Evaluation metrics and benchmarks for lane topology understanding and HD map generation.</li>
+        <li>Vision-Language-Action (VLA) models for robust embodied intelligence in unstructured and challenging driving scenarios.</li>
+        <li>Planning-oriented scene understanding: traffic signal detection, vulnerable road user (VRU) identification, and meta-action prediction.</li>
+        <li>End-to-end trajectory planning and prediction under corner cases.</li>
+        <li>Adversarial driving scenario generation and robustness testing of end-to-end autonomous driving models.</li>
+        <li>Safety-critical edge case synthesis and data augmentation for autonomous driving.</li>
+        <li>3D semantic occupancy prediction and voxel-level scene representation for autonomous driving.</li>
+        <li>Large-scale dataset construction and annotation for 3D scene understanding.</li>
+        <li>Generative and discriminative models for occupancy forecasting and scene completion.</li>
     </ul>
 
 
+
+    <div class="divider"></div>
+
+    <h2 id="challenges">Challenges</h2>
+    <p>The TopoCoT Workshop hosts <strong>four</strong> co-located challenges that collectively address key open problems in autonomous driving—from CoT-driven lane topology reasoning, robust embodied intelligence, adversarial stress-testing, to large-scale 3D scene understanding.</p>
+
+    <!-- Challenge 1 (TopoCoT) -->
+    <div class="challenge-card">
+        <h3>
+            <span class="challenge-tag">Challenge 1</span>
+            <span class="challenge-title-text">Lane Topology Reasoning and HD Map Generation via CoT (TopoCoT)</span>
+            <a href="https://huggingface.co/spaces/zhanchao019/test_server_wacv" class="challenge-page-btn" target="_blank">🏆 Challenge Leaderboard ↗</a>
+        </h3>
+        <p>
+            <strong>Overview:</strong> This is the main challenge of the TopoCoT Workshop. Participants develop models for robust and generalized lane topology understanding and HD map generation, with a focus on Chain-of-Thought (CoT) reasoning designs. The challenge is based on two open-source real-world CoT lane topology reasoning datasets released by the workshop organizers.
+        </p>
+        <details>
+            <summary>Task Details</summary>
+            <p><strong>Goal:</strong> Assess the capabilities of language and computer vision models in addressing HD map generation challenges, leveraging CoT reasoning to improve topology understanding.</p>
+        </details>
+        <div class="challenge-links">
+            <a href="https://huggingface.co/spaces/zhanchao019/test_server_wacv" class="challenge-link-btn" target="_blank">🏆 Leaderboard</a>
+            <a href="https://github.com/TopoCoTWACV26/TopoCoT_code" class="challenge-link-btn" target="_blank">💻 Baseline Code</a>
+            <a href="https://modelscope.cn/datasets/yimingyang23/TopoCoT/files" class="challenge-link-btn" target="_blank">📦 Dataset</a>
+        </div>
+    </div>
+
+    <!-- Challenge 2 -->
+    <div class="challenge-card">
+        <h3>
+            <span class="challenge-tag">Challenge 2</span>
+            <span class="challenge-title-text">Robust and Safe Embodied Intelligence in Challenging Scenarios</span>
+            <a href="https://dubolin999.github.io/WACV_0/" class="challenge-page-btn" target="_blank">🔗 Challenge Page ↗</a>
+        </h3>
+        <p>
+            <strong>Overview:</strong> Autonomous driving systems excel in structured environments, yet struggle in unstructured "last-mile" scenarios. This challenge leverages the <em>Impromptu VLA Dataset</em>—~80,000 clips of diverse and challenging corner cases—to evaluate Vision-Language-Action (VLA) models on safe planning and reasoning.
+        </p>
+        <details>
+            <summary>Task Details</summary>
+            <p>Tasks are structured as Planning-Oriented Q&amp;A across three levels:</p>
+            <ol>
+                <li><strong>Scene Understanding &amp; Perception:</strong> Traffic signal detection (including non-standard lights), Vulnerable Road User (VRU) identification under occlusion/low-light.</li>
+                <li><strong>Reasoning &amp; Prediction:</strong> Drivable area estimation, meta-action planning (e.g., "Decelerate and Nudge Left"), dynamic object motion prediction.</li>
+                <li><strong>End-to-End Trajectory Planning:</strong> Given 1.5s history, predict future waypoints over a 5-second horizon.</li>
+            </ol>
+            <p><strong>Evaluation Metrics:</strong></p>
+            <ul>
+                <li>Perception &amp; Reasoning: Exact-match accuracy (Meta-Planning, Dynamic Object, Traffic Light, VRU).</li>
+                <li>Trajectory Planning: Average L2 Error at 1s / 2s / 3s / 4s horizons (lower is better).</li>
+            </ul>
+        </details>
+        <div class="challenge-links">
+            <a href="https://dubolin999.github.io/WACV_0/" class="challenge-link-btn" target="_blank">🔗 Challenge Page</a>
+            <a href="https://arxiv.org/abs/2505.23757" class="challenge-link-btn" target="_blank">📄 Reference Paper</a>
+        </div>
+    </div>
+
+    <!-- Challenge 3 -->
+    <div class="challenge-card">
+        <h3>
+            <span class="challenge-tag">Challenge 3</span>
+            <span class="challenge-title-text">Adversarial Driving Scene Generation Challenge</span>
+            <a href="https://dubolin999.github.io/WACV_1/" class="challenge-page-btn" target="_blank">🔗 Challenge Page ↗</a>
+        </h3>
+        <p>
+            <strong>Overview:</strong> Current benchmarks lack the ability to systematically stress-test End-to-End (E2E) driving models against edge cases. This challenge inverts the usual paradigm: participants generate <em>adversarial</em> driving scenarios (based on nuScenes data) designed to induce failures in state-of-the-art E2E models, while maintaining physical plausibility.
+        </p>
+        <details>
+            <summary>Task Details</summary>
+            <p><strong>Your Goal:</strong> Manipulate the trajectory of exactly one background vehicle to create an aggressive or unexpected interaction with the ego vehicle.</p>
+            <p><strong>Constraints:</strong></p>
+            <ul>
+                <li>The adversarial agent must remain within drivable area boundaries at all times.</li>
+                <li>No collisions with other background vehicles are allowed.</li>
+                <li>A minimum safety distance from the ego vehicle must be maintained (no ramming).</li>
+            </ul>
+            <p><strong>Three-Stage Evaluation Pipeline:</strong></p>
+            <ol>
+                <li><strong>Performance Testing:</strong> Generated clips are evaluated against four SOTA E2E AD models in open-loop setting.</li>
+                <li><strong>Neural Rendering:</strong> Scenarios are converted to high-fidelity RGB video clips.</li>
+                <li><strong>Kinematic Rectification:</strong> Trajectory smoothness and physical feasibility are enforced via LQR controller.</li>
+            </ol>
+            <p><strong>Primary Metric:</strong> Average Collision Rate (higher = more adversarially effective, higher is better).</p>
+        </details>
+        <div class="challenge-links">
+            <a href="https://dubolin999.github.io/WACV_1/" class="challenge-link-btn" target="_blank">🔗 Challenge Page</a>
+            <a href="https://arxiv.org/abs/2505.15880" class="challenge-link-btn" target="_blank">📄 Reference Paper</a>
+        </div>
+    </div>
+
+    <!-- Challenge 4 -->
+    <div class="challenge-card">
+        <h3>
+            <span class="challenge-tag">Challenge 4</span>
+            <span class="challenge-title-text">Large-scale 3D Semantic Occupancy Prediction on NuPlan-Occ</span>
+            <a href="https://pureapollo.github.io/WACV/" class="challenge-page-btn" target="_blank">🔗 Challenge Page ↗</a>
+        </h3>
+        <p>
+            <strong>Overview:</strong> Semantic occupancy prediction provides dense, voxel-level scene representations critical for autonomous driving. This challenge introduces <em>NuPlan-Occ</em>—the largest publicly available semantic occupancy dataset, with 3.6 million frames annotated at 400×400×32 voxel resolution across 19K scenes, derived from the NuPlan benchmark.
+        </p>
+        <details>
+            <summary>Task Details</summary>
+            <p><strong>Input:</strong> Multi-view camera images (+ optional LiDAR, BEV maps).<br>
+            <strong>Output:</strong> 3D semantic occupancy grid with 9 classes: <code>vehicle, pedestrian, bicycle, traffic_cone, barrier, czone_sign, generic_object, background, empty</code>.</p>
+            <p><strong>Two Tracks:</strong></p>
+            <ul>
+                <li><strong>Discriminative Track:</strong> Predict occupancy from input images.</li>
+                <li><strong>Generative Track:</strong> Forecast occupancy sequences or complete partial scenes.</li>
+            </ul>
+            <p><strong>Evaluation Metrics:</strong> mIoU (primary), per-class IoU, Precision, Recall.</p>
+            <p><strong>Baseline (MonoScene on NuPlan-Occ miniset):</strong></p>
+            <table class="metric-table">
+                <thead><tr><th>Precision</th><th>Recall</th><th>IoU</th><th>mIoU</th></tr></thead>
+                <tbody><tr><td>48.99</td><td>42.54</td><td>29.49</td><td>9.36</td></tr></tbody>
+            </table>
+        </details>
+        <div class="challenge-links">
+            <a href="https://pureapollo.github.io/WACV/" class="challenge-link-btn" target="_blank">🔗 Challenge Page</a>
+            <a href="https://arxiv.org/abs/2510.22973" class="challenge-link-btn" target="_blank">📄 Reference Paper</a>
+            <a href="https://github.com/Arlo0o/UniScene-Unified-Occupancy-centric-Driving-Scene-Generation/tree/v2" class="challenge-link-btn" target="_blank">💻 GitHub</a>
+            <a href="https://huggingface.co/datasets/Arlolo0/Nuplan-Occupancy" class="challenge-link-btn" target="_blank">📦 Dataset (HuggingFace)</a>
+        </div>
+    </div>
 
     <div class="divider"></div>
     <h2>Organizers</h2>
@@ -284,6 +489,36 @@
   year={2025}
 }
 
+// ---- Challenge Papers ----
+
+@article{chi2025impromptu,
+  title={Impromptu VLA: Open Weights and Open Data for Driving Vision-Language-Action Models},
+  author={Chi, Haohan and Gao, Huan-ang and Liu, Ziming and Liu, Jianing and Liu, Chenyu and Li, Jinwei and Yang, Kaisen and Yu, Yangcheng and Wang, Zeda and Li, Wenyi and others},
+  journal={arXiv preprint arXiv:2505.23757},
+  year={2025}
+}
+
+@article{xu2025challenger,
+  title={Challenger: Affordable adversarial driving video generation},
+  author={Xu, Zhiyuan and Li, Bohan and Gao, Huan-ang and Gao, Mingju and Chen, Yong and Liu, Ming and Yan, Chenxu and Zhao, Hang and Feng, Shuo and Zhao, Hao},
+  journal={arXiv preprint arXiv:2505.15880},
+  year={2025}
+}
+
+@inproceedings{li2025uniscene,
+  title={Uniscene: Unified occupancy-centric driving scene generation},
+  author={Li, Bohan and Guo, Jiazhe and Liu, Hongsi and others},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={11971--11981},
+  year={2025}
+}
+
+@article{li2025scaling,
+  title={Scaling Up Occupancy-centric Driving Scene Generation: Dataset and Method},
+  author={Li, Bohan and Jin, Xin and Zhu, Hu and Liu, Hongsi and others},
+  journal={arXiv preprint arXiv:2510.22973},
+  year={2025}
+}
 
 </pre>
 </body>
