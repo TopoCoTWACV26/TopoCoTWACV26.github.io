@@ -407,7 +407,7 @@
 
     <h2>Schedule</h2>
     <p><strong>Workshop Date:</strong> Mar 7, 2026</p>
-    <p><strong>Workshop Time:</strong> 13:00 pm – 16:30 pm</p>
+    <p><strong>Workshop Time:</strong> 13:00 pm – 17:00 pm</p>
     <p><strong>Workshop Location:</strong> Arizona Ballroom Salon 8</p>
     
     <p>Please find the tentative workshop schedule below:</p>
@@ -432,8 +432,8 @@
             </tr>
             <tr class="talk-row">
                 <td>13:45 -- 14:30</td>
-                <td>Production-ready Autonomous Driving World Models</td>
-                <td>Hao Zhao (THU)</td>
+                <td>Structured Sensing for Active Uncertainty Mitigation in Autonomous Driving</td>
+                <td>Mellon Zhang (Georgia Tech)</td>
             </tr>
             <tr>
                 <td>14:30 -- 15:00</td>
@@ -450,12 +450,17 @@
                 <td>Manmohan Chandraker (UC San Diego)</td>
             </tr>
             <tr>
-                <td>15:50 -- 16:20</td>
+                <td>15:50 -- 16:15</td>
                 <td>Technical Reports</td>
                 <td>Authors</td>
             </tr>
+            <tr class="talk-row">
+                <td>16:15 -- 17:00</td>
+                <td>Production-ready Autonomous Driving World Models</td>
+                <td>Hao Zhao (THU)</td>
+            </tr>
             <tr>
-                <td>16:20 -- 16:30</td>
+                <td>17:00 -- 17:05</td>
                 <td colspan="2"><strong>Summary &amp; Closing Remarks</strong> — Zhen Li (CUHKSZ)</td>
             </tr>
         </tbody>
@@ -478,6 +483,22 @@
                 <p>Next, <em>NavMapFusion</em> addresses the integration of navigation priors by effectively fusing low-fidelity navigation maps with high-fidelity sensor data, closing the perception gap at long ranges by treating map discrepancies as resolvable noise within the diffusion process.</p>
                 <p>Finally, <em>BEVLM</em> transitions from geometric structure to semantic understanding by leveraging Bird's-Eye View representations as a superior interface for LLM spatial reasoning, producing semantic-enhanced BEV representations that yield significant gains in safety-critical planning and reduced collision rates in complex corner cases.</p>
                 <p><strong>Bio:</strong> Thomas Monninger is a Staff Machine Learning Engineer at Mercedes-Benz Research &amp; Development North America, where he specializes in advancing novel machine learning technologies for autonomous driving. Over his ten-year tenure with Mercedes-Benz, he has developed deep technical expertise across Perception, Sensor Fusion, Prediction, and Mapping. An active contributor to the autonomous vehicle research community, Thomas has authored multiple academic papers and holds several related patents. He successfully defended his PhD in Computer Science at the University of Stuttgart, Germany, focusing on Scene Understanding for Autonomous Driving.</p>
+            </details>
+        </div>
+    </div>
+
+    <div class="speaker-card">
+        <img src="/img/mellon zhang.jpg" alt="Mellon Zhang">
+        <div class="speaker-info">
+            <h3>Mellon Zhang</h3>
+            <div class="speaker-org">PhD Student in Machine Learning, Georgia Institute of Technology</div>
+            <p class="talk-title">Title: Structured Sensing for Active Uncertainty Mitigation in Autonomous Driving</p>
+            <details>
+                <summary>Abstract &amp; Bio</summary>
+                <p><strong>Abstract:</strong> Autonomous driving systems must reason under uncertainty in dynamic and safety-critical environments, where delayed or mislocalized perception can directly impact scene understanding and downstream control. While significant progress has been made in structured reasoning and uncertainty-aware models, the structure of sensing itself plays a complementary role in enabling robust autonomy.</p>
+                <p>This talk argues that active uncertainty mitigation benefits from preserving the temporal and causal ordering of sensor measurements, rather than collapsing them into static frames before inference. Using LiDAR as a case study, it shows how conventional full-scan pipelines aggregate 360° sweeps prior to processing, discarding intra-sweep structure and introducing latency that limits reactivity and directional awareness. In contrast, streaming processing maintains the sequential structure of acquisition, enabling fine-grained spatial locality, earlier anomaly localization, and incremental scene understanding.</p>
+                <p>The talk further discusses how hybrid streaming frameworks can combine local, temporally ordered sensing with global scene reasoning, and outlines ongoing efforts to leverage structured sensing for real-time anomaly detection and tighter integration with downstream planning and control. Together, these ideas highlight how structured sensing and structured reasoning can jointly advance robust and safety-critical autonomy.</p>
+                <p><strong>Bio:</strong> Mellon Zhang is a PhD student in Machine Learning at the Georgia Institute of Technology. His research focuses on improving the real-world reliability and deployability of embodied foundation models through structured representation learning. He studies how temporal, spatial, and geometric structure in perception and action can improve robustness and generalization in safety-critical systems. His work has been published at leading conferences including CVPR and WACV.</p>
             </details>
         </div>
     </div>
