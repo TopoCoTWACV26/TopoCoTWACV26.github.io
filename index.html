@@ -138,6 +138,40 @@
             color: #2980b9;
             margin-bottom: 6px;
         }
+        .speaker-card {
+            display: flex;
+            gap: 24px;
+            align-items: flex-start;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin: 20px 0;
+            background: #fafafa;
+        }
+        .speaker-card img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            flex-shrink: 0;
+        }
+        .speaker-info h3 {
+            margin: 0 0 4px 0;
+            color: #1a5276;
+        }
+        .speaker-info .speaker-org {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+        .speaker-info .talk-title {
+            font-style: italic;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
+        .talk-row td:nth-child(2) {
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -372,8 +406,9 @@
     <div class="divider"></div>
 
     <h2>Schedule</h2>
-    <p><strong>Workshop Date:</strong>Mar 7, 2026</p>
-    <p><strong>Workshop Location:</strong> TBD</p>
+    <p><strong>Workshop Date:</strong> Mar 7, 2026</p>
+    <p><strong>Workshop Time:</strong> 13:00 pm – 16:30 pm</p>
+    <p><strong>Workshop Location:</strong> Arizona Ballroom Salon 8</p>
     
     <p>Please find the tentative workshop schedule below:</p>
     
@@ -387,54 +422,81 @@
         </thead>
         <tbody>
             <tr>
-                <td>13:00 -- 13:10</td>
+                <td>13:00 -- 13:05</td>
                 <td colspan="2"><strong>Opening Remarks</strong></td>
             </tr>
+            <tr class="talk-row">
+                <td>13:05 -- 13:45</td>
+                <td>Generative and Semantic-Enhanced Scene Understanding for Autonomous Driving</td>
+                <td>Thomas Monninger (Mercedes-Benz R&amp;D / Univ. Stuttgart)</td>
+            </tr>
+            <tr class="talk-row">
+                <td>13:45 -- 14:30</td>
+                <td>Production-ready Autonomous Driving World Models</td>
+                <td>Hao Zhao (THU)</td>
+            </tr>
             <tr>
-                <td>13:10 -- 13:40</td>
+                <td>14:30 -- 15:00</td>
                 <td>Topic: TBD</td>
                 <td>Hongyang Li (HKU)</td>
             </tr>
             <tr>
-                <td>13:40 -- 14:10</td>
-                <td>Topic: TBD</td>
-                <td>Hengshuang Zhao (HKU)</td>
-            </tr>
-            <tr>
-                <td>14:10 -- 14:40</td>
-                <td>Technical reports</td>
-                <td>Authors</td>
-            </tr>
-            <tr>
-                <td>14:40 -- 15:00</td>
+                <td>15:00 -- 15:20</td>
                 <td colspan="2">Coffee Break</td>
             </tr>
             <tr>
-                <td>15:00 -- 15:30</td>
+                <td>15:20 -- 15:50</td>
                 <td>Topic: TBD</td>
                 <td>Manmohan Chandraker (UC San Diego)</td>
             </tr>
             <tr>
-                <td>15:30 -- 16:00</td>
-                <td>Topic: TBD</td>
-                <td>Jim Rehg (UIUC)</td>
+                <td>15:50 -- 16:20</td>
+                <td>Technical Reports</td>
+                <td>Authors</td>
             </tr>
             <tr>
-                <td>16:00 -- 16:30</td>
-                <td>Topic: TBD</td>
-                <td>Ziran Wang (Purdue)</td>
-            </tr>
-            <tr>
-                <td>16:30 -- 17:00</td>
-                <td>Summary of the Workshop</td>
-                <td>Zhen Li (CUHKSZ)</td>
-            </tr>
-            <tr>
-                <td>17:00 -- 17:10</td>
-                <td colspan="2"><strong>Closing Remarks</strong></td>
+                <td>16:20 -- 16:30</td>
+                <td colspan="2"><strong>Summary &amp; Closing Remarks</strong> — Zhen Li (CUHKSZ)</td>
             </tr>
         </tbody>
     </table>
+
+    <div class="divider"></div>
+
+    <h2 id="speakers">Invited Speakers</h2>
+
+    <div class="speaker-card">
+        <img src="/img/Thomas Monninger.jpg" alt="Thomas Monninger">
+        <div class="speaker-info">
+            <h3>Thomas Monninger</h3>
+            <div class="speaker-org">Staff Machine Learning Engineer, Mercedes-Benz Research &amp; Development North America &nbsp;·&nbsp; PhD, University of Stuttgart</div>
+            <p class="talk-title">Title: Generative and Semantic-Enhanced Scene Understanding for Autonomous Driving</p>
+            <details>
+                <summary>Abstract &amp; Bio</summary>
+                <p><strong>Abstract:</strong> The safe operation of autonomous vehicles in complex environments requires an accurate and complete representation of static road infrastructure. However, traditional online mapping approaches often struggle with real-world ambiguities, such as occlusions and missing lane markings, and lack the high-level semantic richness needed for "long-tail" scenarios.</p>
+                <p>This talk presents a unified framework for scene understanding that bridges the gap between geometric reconstruction and semantic reasoning. The generative diffusion paradigm is first explored through <em>MapDiffusion</em>. By formulating map construction as an iterative denoising process, the model learns to capture the full distribution of plausible maps, enabling spatial uncertainty estimates that directly correlate with perceptual ambiguity in the real world.</p>
+                <p>Next, <em>NavMapFusion</em> addresses the integration of navigation priors by effectively fusing low-fidelity navigation maps with high-fidelity sensor data, closing the perception gap at long ranges by treating map discrepancies as resolvable noise within the diffusion process.</p>
+                <p>Finally, <em>BEVLM</em> transitions from geometric structure to semantic understanding by leveraging Bird's-Eye View representations as a superior interface for LLM spatial reasoning, producing semantic-enhanced BEV representations that yield significant gains in safety-critical planning and reduced collision rates in complex corner cases.</p>
+                <p><strong>Bio:</strong> Thomas Monninger is a Staff Machine Learning Engineer at Mercedes-Benz Research &amp; Development North America, where he specializes in advancing novel machine learning technologies for autonomous driving. Over his ten-year tenure with Mercedes-Benz, he has developed deep technical expertise across Perception, Sensor Fusion, Prediction, and Mapping. An active contributor to the autonomous vehicle research community, Thomas has authored multiple academic papers and holds several related patents. He successfully defended his PhD in Computer Science at the University of Stuttgart, Germany, focusing on Scene Understanding for Autonomous Driving.</p>
+            </details>
+        </div>
+    </div>
+
+    <div class="speaker-card">
+        <img src="https://air.tsinghua.edu.cn/__local/A/E0/B9/8151B5539B8747D4663584D7A21_2F9F80B8_4C0F.jpg" alt="Hao Zhao">
+        <div class="speaker-info">
+            <h3><a href="https://sites.google.com/view/fromandto/" target="_blank">Hao Zhao</a></h3>
+            <div class="speaker-org">Assistant Professor, Institute for Intelligent Industry (AIR), Tsinghua University &nbsp;·&nbsp; BAAI Scholar</div>
+            <p class="talk-title">Title: Production-ready Autonomous Driving World Models</p>
+            <details>
+                <summary>Abstract &amp; Bio</summary>
+                <p><strong>Abstract:</strong> Achieving reliable autonomous driving demands scalable, generalizable, and production-ready world models capable of sensing, acting, and evaluating safety in diverse real-world environments. However, current generative pipelines either focus on a single modality, lack controllability, or fail to support closed-loop decision making. This talk presents a unified perspective on next-generation world models for autonomous driving, grounded in three recent works.</p>
+                <p>First, <em>UniScene</em> introduces an occupancy-centric generation paradigm that progressively synthesizes semantic occupancy → video &amp; LiDAR, enabling high-fidelity, controllable, and richly annotated data for simulation and training. Second, <em>DiST-4D</em> advances dynamic scene synthesis by leveraging metric depth as a unified geometric representation, achieving state-of-the-art performance in both temporal trajectory extrapolation and spatial novel-view rendering without per-scene optimization. Finally, <em>OmniNWM</em> pushes world models toward true autonomy by jointly modeling state, action, and reward within a panoramic navigation framework, supporting precise ego-control and occupancy-grounded closed-loop safety evaluation.</p>
+                <p>Together, these systems highlight a practical and scalable pathway toward industrial deployment: world models as controllable, geometry-aware, reward-driven simulators that bridge learning and safety-critical execution.</p>
+                <p><strong>Bio:</strong> Hao Zhao is an Assistant Professor at the Institute for Intelligent Industry (AIR), Tsinghua University, and a BAAI Scholar. He received his B.Eng. and Ph.D. degrees from the Department of Electronic Engineering at Tsinghua University, and previously worked as a Research Scientist at Intel Labs China and as a Postdoctoral Researcher at Peking University. Prof. Zhao has published 50+ papers in top-tier venues such as CVPR, NeurIPS, SIGGRAPH, ICRA, and journals including TPAMI and IJCV. His work has won multiple championships in 3D scene understanding challenges and led to the development of MARS, the world's first open-source, modular, and highly realistic autonomous driving simulator, which received the Best Paper Runner-up Award at CICAI 2023. His work SlimmeRF won the Best Paper Award at 3DV 2024.</p>
+            </details>
+        </div>
+    </div>
 
     <div class="divider"></div>
 
