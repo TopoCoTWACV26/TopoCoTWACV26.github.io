@@ -435,23 +435,24 @@
                 <td>Structured Sensing for Active Uncertainty Mitigation in Autonomous Driving</td>
                 <td>Mellon Zhang (Georgia Tech)</td>
             </tr>
+
             <tr>
-                <td>14:35 -- 15:15</td>
-                <td>Topic: TBD</td>
-                <td>Hongyang Li (HKU)</td>
-            </tr>
-            <tr>
-                <td>15:15 -- 16:00</td>
+                <td>14:35 -- 15:05</td>
                 <td colspan="2">Coffee Break</td>
             </tr>
 
             <tr class="talk-row">
-                <td>16:15 -- 17:00</td>
+                <td>15:05 -- 15:50</td>
+                <td>Context-Aware Autonomous Driving in Adverse Operating Conditions</td>
+                <td>Shounak Sural (CMU)</td>
+            </tr>
+            <tr class="talk-row">
+                <td>15:50 -- 16:35</td>
                 <td>Production-ready Autonomous Driving World Models</td>
                 <td>Hao Zhao (THU)</td>
             </tr>
             <tr>
-                <td>17:00 -- 17:05</td>
+                <td>16:35 -- 16:40</td>
                 <td colspan="2"><strong>Summary &amp; Closing Remarks</strong> — Zhen Li (CUHKSZ)</td>
             </tr>
         </tbody>
@@ -490,6 +491,22 @@
                 <p>This talk argues that active uncertainty mitigation benefits from preserving the temporal and causal ordering of sensor measurements, rather than collapsing them into static frames before inference. Using LiDAR as a case study, it shows how conventional full-scan pipelines aggregate 360° sweeps prior to processing, discarding intra-sweep structure and introducing latency that limits reactivity and directional awareness. In contrast, streaming processing maintains the sequential structure of acquisition, enabling fine-grained spatial locality, earlier anomaly localization, and incremental scene understanding.</p>
                 <p>The talk further discusses how hybrid streaming frameworks can combine local, temporally ordered sensing with global scene reasoning, and outlines ongoing efforts to leverage structured sensing for real-time anomaly detection and tighter integration with downstream planning and control. Together, these ideas highlight how structured sensing and structured reasoning can jointly advance robust and safety-critical autonomy.</p>
                 <p><strong>Bio:</strong> Mellon Zhang is a PhD student in Machine Learning at the Georgia Institute of Technology. His research focuses on improving the real-world reliability and deployability of embodied foundation models through structured representation learning. He studies how temporal, spatial, and geometric structure in perception and action can improve robustness and generalization in safety-critical systems. His work has been published at leading conferences including CVPR and WACV.</p>
+            </details>
+        </div>
+    </div>
+
+    <div class="speaker-card">
+        <img src="/img/shounak_sural_photo.jpeg" alt="Shounak Sural">
+        <div class="speaker-info">
+            <h3>Shounak Sural</h3>
+            <div class="speaker-org">Senior PhD Student, Electrical and Computer Engineering, Carnegie Mellon University</div>
+            <p class="talk-title">Title: Context-Aware Autonomous Driving in Adverse Operating Conditions</p>
+            <details>
+                <summary>Abstract &amp; Bio</summary>
+                <p><strong>Abstract:</strong> Autonomous vehicles (AVs) are seeing increasing deployment, yet their reliability under adverse operating contexts remains a key challenge for their safe and scalable operation. Poor visibility, degraded sensing in bad weather, GPS-denied operating zones, and road environments such as work zones often cause problems for AVs. Such operating contexts require the understanding of diverse environmental elements along with the ability to adapt quickly to such environmental changes.</p>
+                <p>This talk presents a framework called <em>Contextuate</em> that unifies adaptive fusion, data-efficient learning, and co-simulation into a pipeline explicitly designed for safe operation in diverse contexts. Co-simulation connects an autonomous vehicle software stack with a high-fidelity sensor-rich simulator, enabling both closed-loop evaluation of challenging contexts and scalable generation of synthetic data. Context-aware sensor fusion strategies are introduced, where perception adapts dynamically to the operating environment by adaptively leveraging LiDAR and camera sensing modalities, achieving significant improvements in object detection under degraded sensing conditions.</p>
+                <p>A multimodal dataset centered on work zones is presented as a critical adverse road condition requiring accurate 3D perception followed by safe planning. Finally, context understanding with Vision-Language Models is discussed as both a fusion strategy and a top-level controller, establishing a viable path towards safe and scalable autonomy across a range of operating contexts.</p>
+                <p><strong>Bio:</strong> Shounak Sural is a senior PhD student in Electrical and Computer Engineering at Carnegie Mellon University. His research focuses on context-aware autonomous driving in adverse operating conditions. He has expertise across perception, localization, and planning for autonomous vehicles. He has also worked on physics-informed continuous-time models for robotics during his time at Amazon Robotics. His research has been published at top autonomous driving venues over the years.</p>
             </details>
         </div>
     </div>
